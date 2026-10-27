@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "orobster-retryflood"
+version = "0.1.0"
+description = "按时间窗口统计重试密度，标出触发风暴的失败类型"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "orobster" }]
+keywords = ["llm", "cli", "analysis", "observability"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://orobster.github.io"
+Repository = "https://github.com/orobster/retryflood"
+Issues = "https://github.com/orobster/retryflood/issues"
+
+[project.scripts]
+retryflood = "retryflood:main"
+
+[tool.setuptools]
+py-modules = ["retryflood"]
